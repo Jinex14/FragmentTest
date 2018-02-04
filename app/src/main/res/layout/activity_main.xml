@@ -15,6 +15,12 @@
         android:layout_height="wrap_content"
         android:text="Testeando Fragmentos" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCambio"
+        android:text="fragDinamico"/>
+
     <!-- Fragmentes !-->
 
     <LinearLayout
@@ -23,6 +29,7 @@
         android:orientation="horizontal">
 
         <fragment
+            android:id="@+id/fragUno"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="com.jeancarlo.fragmenttest.fragUno"
@@ -30,6 +37,7 @@
             tools:layout="@layout/fragment_frag_uno" />
 
         <fragment
+            android:id="@+id/fragDos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -26,6 +28,9 @@ public class fragDos extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    //Crear instancia
+    Button btnAzul;
+    View vista;
 
     private OnFragmentInteractionListener mListener;
 
@@ -63,8 +68,22 @@ public class fragDos extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_frag_dos, container, false);
+        // inflar la vista con el layout
+        vista=inflater.inflate(R.layout.fragment_frag_dos, container, false);
+        //Castear el boton
+        btnAzul= (Button) vista.findViewById(R.id.botonAzul);
+        //Generar Accion del boton
+        btnAzul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Accion
+                Toast.makeText(getContext(),"Accion",Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
+        return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
