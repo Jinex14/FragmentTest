@@ -23,11 +23,8 @@ public class FragmentDinamico extends AppCompatActivity implements fragAzul.OnFr
         fVerde=new FragVerde();
         fAzul=new fragAzul();
         fRojo=new fragRojo();
-        //Castear Botones
+        //Manejo de transaccion de fragment
         getSupportFragmentManager().beginTransaction().add(R.id.contendor,fRojo).commit();
-
-
-
     }
 
     @Override
@@ -44,6 +41,7 @@ public class FragmentDinamico extends AppCompatActivity implements fragAzul.OnFr
                 trans.replace(R.id.contendor,fRojo);
                 //ejecutar Metodo
                 fRojo.hola(getApplicationContext());
+                fRojo.texto("remplazo");
                 break;
             case R.id.btnAzul:
                 //Remplazar

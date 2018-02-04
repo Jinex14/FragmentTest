@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -27,6 +28,9 @@ public class fragRojo extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    //Declaracion de variables
+    View vista;
+    TextView txtHola;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,8 +68,11 @@ public class fragRojo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_frag_rojo, container, false);
+        //Inflar la vista
+        vista=inflater.inflate(R.layout.fragment_frag_rojo, container, false);
+        //castear el textView
+        txtHola= (TextView) vista.findViewById(R.id.txtHola);
+                return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -112,4 +119,10 @@ public class fragRojo extends Fragment {
         //Accion
         Toast.makeText(context,"Este es un hola desde un fragment",Toast.LENGTH_LONG).show();
     }
+
+    public void texto(String texto){
+        txtHola= (TextView) vista.findViewById(R.id.txtHola);
+        txtHola.setText(texto.toString());
+    }
+
 }
