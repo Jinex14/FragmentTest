@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 /**
@@ -104,5 +105,11 @@ public class fragRojo extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    //Test de inicio Recordar pasar siempre un contexto
+    public void hola(Context context){
+        //Accion
+        Toast.makeText(context,"Este es un hola desde un fragment",Toast.LENGTH_LONG).show();
     }
 }

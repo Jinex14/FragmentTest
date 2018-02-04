@@ -42,6 +42,8 @@ public class FragmentDinamico extends AppCompatActivity implements fragAzul.OnFr
             case R.id.btnRojo:
                 //Remplazar
                 trans.replace(R.id.contendor,fRojo);
+                //ejecutar Metodo
+                fRojo.hola(getApplicationContext());
                 break;
             case R.id.btnAzul:
                 //Remplazar
