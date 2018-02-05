@@ -121,7 +121,6 @@ public class fragRojo extends Fragment {
     }
 
     public void texto(String texto){
-        txtHola= (TextView) vista.findViewById(R.id.txtHola);
         txtHola.setText(texto.toString());
     }
 
